@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { notoSerif } from "@/lib/fonts";
+import { fontNotoSerif } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Tomer Shafir",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={notoSerif.className}>
+      <body className={fontNotoSerif}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

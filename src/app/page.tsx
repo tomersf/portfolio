@@ -7,13 +7,13 @@ import Skills from "@/components/skills";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:[background-size:0px_0px]">
-      <section className="h-[30vh]">
+      <section className="h-[50vh]">
         <Hero />
       </section>
-      <section className="h-[30vh]" id="about">
+      <section className="h-[40vh]" id="about">
         <About />
       </section>
-      <section className="" id="skills">
+      <section className="h-[40vh]" id="skills">
         <Skills />
       </section>
       <section className="" id="projects">

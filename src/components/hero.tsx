@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { notoSerif } from "@/lib/fonts";
+import { fontNotoSerif } from "@/lib/fonts";
 import TextAnimation from "./text";
 
 type Props = {};
@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
       >
         <div className="p-2">
           <h1
-            className={`${notoSerif.className} sm:text-4xl md:text-8xl lg:text-9xl font-light`}
+            className={`${fontNotoSerif} sm:text-4xl md:text-8xl lg:text-9xl font-light`}
           >
             TOMER SHAFIR
           </h1>

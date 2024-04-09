@@ -1,15 +1,19 @@
 import { Noto_Serif, Merriweather_Sans, Lustria } from "next/font/google";
 
-export const notoSerif = Noto_Serif({
+const notoSerif = Noto_Serif({
     subsets: ["latin"],
     variable: "--font-noto",
 });
-export const merriweatherSans = Merriweather_Sans({
+const merriweatherSans = Merriweather_Sans({
     subsets: ["latin"],
     variable: "--font-merriweather",
-});
-export const lustria = Lustria({
+})
+const lustria = Lustria({
     subsets: ["latin"],
     weight: "400",
     variable: "--font-lustria",
 });
+
+export const fontNotoSerif = notoSerif.className
+export const fontMerriweatherSans = merriweatherSans.className
+export const fontLustria = lustria.className
