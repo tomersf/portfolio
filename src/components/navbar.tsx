@@ -8,6 +8,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { animationFadeInStaggerVariants } from "@/lib/animation";
 
 type NavOption = {
   label: string;
@@ -15,25 +17,37 @@ type NavOption = {
 };
 
 const navOptions: NavOption[] = [
-  { label: "About", href: "/about" },
-  { label: "Skills", href: "/skills" },
-  { label: "Contact", href: "/contact" },
-  { label: "Projects", href: "/projects" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#akills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navarbar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <motion.section
+          variants={animationFadeInStaggerVariants()}
+          className="flex"
+          initial="hidden"
+          animate="show"
+        >
           {navOptions.map((option) => (
-            <Link href={option.href} legacyBehavior passHref key={option.label}>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {option.label}
-              </NavigationMenuLink>
-            </Link>
+            <motion.div
+              key={option.label}
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
+            >
+              <NavigationMenuItem>
+                <Link href={option.href} legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    {option.label}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </motion.div>
           ))}
-        </NavigationMenuItem>
+        </motion.section>
       </NavigationMenuList>
     </NavigationMenu>
   );

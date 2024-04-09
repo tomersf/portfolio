@@ -4,14 +4,6 @@ import * as React from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 import { motion } from "framer-motion";
 
 const TOGGLE_CLASSES =
@@ -20,7 +12,7 @@ const TOGGLE_CLASSES =
 const ThemeToggle = () => {
   const { setTheme } = useTheme();
   return (
-    <div className="relative flex flex-col w-fit items-center rounded-full">
+    <div className="relative flex md:flex-col w-fit items-center rounded-full">
       <button
         className={`${TOGGLE_CLASSES} dark:text-slate-300 !dark:text-white`}
         onClick={() => {
@@ -39,11 +31,11 @@ const ThemeToggle = () => {
         <MoonIcon className="relative z-10 text-lg md:text-sm" />
         <span className="relative z-10">Dark</span>
       </button>
-      <div className="absolute inset-0 z-0 flex flex-col dark:justify-end !dark:justify-start">
+      <div className="absolute inset-0 z-0 flex md:flex-col dark:justify-end !dark:justify-start">
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="w-full h-1/2 rounded-full bg-gradient-to-r from-accent to-accent"
+          className="w-1/2 h-full md:w-full md:h-1/2 rounded-full bg-gradient-to-r from-accent to-accent"
         />
       </div>
     </div>
