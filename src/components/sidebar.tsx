@@ -7,6 +7,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
+import { navOptions } from "@/lib/constant";
 
 type Props = {};
 
@@ -33,10 +35,11 @@ const Sidebar = (props: Props) => {
         <DropdownMenuContent>
           <DropdownMenuLabel>Navigation</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem></DropdownMenuItem>
-          <DropdownMenuItem>Skills</DropdownMenuItem>
-          <DropdownMenuItem>Projects</DropdownMenuItem>
-          <DropdownMenuItem>Contact</DropdownMenuItem>
+          {navOptions.map((option) => (
+            <DropdownMenuItem key={option.label} asChild>
+              <Link href={option.href}>{option.label}</Link>
+            </DropdownMenuItem>
+          ))}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

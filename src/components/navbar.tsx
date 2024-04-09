@@ -10,18 +10,7 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { animationFadeInStaggerVariants } from "@/lib/animation";
-
-type NavOption = {
-  label: string;
-  href: string;
-};
-
-const navOptions: NavOption[] = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#akills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
+import { navOptions } from "@/lib/constant";
 
 const Navarbar = () => {
   return (

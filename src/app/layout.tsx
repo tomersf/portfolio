@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { useTheme } from "next-themes";
-
-const inter = Inter({ subsets: ["latin"] });
+import { notoSerif } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Tomer Shafir",
@@ -19,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={notoSerif.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
