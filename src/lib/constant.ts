@@ -10,3 +10,13 @@ export const navOptions: NavOption[] = [
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
 ];
+
+export enum BadgeLevel {
+    Beginner = 'Beginner',
+    Novice = 'Novice',
+    Competent = 'Competent',
+    Proficient = 'Proficient',
+    Skilled = 'Skilled',
+    Intermediate = 'Intermidate',
+    Advanced = 'Advanced',
+}
