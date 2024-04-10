@@ -29,7 +29,9 @@ const Navarbar = () => {
             >
               <NavigationMenuItem>
                 <Link href={option.href} legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
+                  >
                     {option.label}
                   </NavigationMenuLink>
                 </Link>

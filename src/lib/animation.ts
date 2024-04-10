@@ -1,7 +1,7 @@
 
 
 
-export const animationFadeInStaggerVariants = (staggerChildrenDelay?: number) => {
+export const animationFadeInStaggerVariants = (staggerChildrenDelay?: number, delayChildren?: number) => {
     return {
         hidden: {
             opacity: 0
@@ -10,6 +10,7 @@ export const animationFadeInStaggerVariants = (staggerChildrenDelay?: number) =>
             opacity: 1,
             transition: {
                 staggerChildren: staggerChildrenDelay || 0.25,
+                delayChildren,
             }
         }
     }

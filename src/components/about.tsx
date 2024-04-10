@@ -2,8 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fontNotoSerif } from "@/lib/fonts";
-import Image from "next/image";
-import TomerSvg from "./svg";
+import TomerSvg from "./self-portrait-svg";
+import Container from "./container";
 
 type Props = {};
 
@@ -11,9 +11,9 @@ const About = (props: Props) => {
   return (
     <div className="w-full h-full flex justify-between p-2">
       <div className="w-1/3 h-full flex flex-col">
-        <h2 className={`${fontNotoSerif} text-4xl font-semibold tracking-wide`}>
-          About Me
-        </h2>
+        <div>
+          <Container />
+        </div>
         <motion.div className="h-full p-2 shadow-lg rounded-md rounded-r-2xl shadow-primary bg-background/50">
           <motion.div></motion.div>
         </motion.div>
