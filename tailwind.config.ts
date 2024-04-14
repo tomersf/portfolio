@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        xs: '480px'
+      },
       fontFamily: {
         noto: ['var(--font-noto)'],
         merriweather: ['var(--font-merriweather)'],

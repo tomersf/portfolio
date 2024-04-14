@@ -1,6 +1,7 @@
 type Icon = {
   svg: JSX.Element;
   href: string;
+  title?: string;
 };
 
 const icons: Icon[] = [
@@ -19,6 +20,7 @@ const icons: Icon[] = [
       </svg>
     ),
     href: "https://www.linkedin.com/in/tomer-shafir-790351180/",
+    title: "Linkedin",
   },
   {
     svg: (
@@ -35,6 +37,7 @@ const icons: Icon[] = [
       </svg>
     ),
     href: "https://github.com/tomersf",
+    title: "GitHub",
   },
   {
     svg: (
@@ -50,6 +53,7 @@ const icons: Icon[] = [
       </svg>
     ),
     href: "/resume.pdf",
+    title: "Resume",
   },
 ];
 

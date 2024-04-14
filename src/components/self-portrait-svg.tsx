@@ -33,7 +33,7 @@ export default function TomerSvg() {
   };
 
   return (
-    <div ref={scope} className="w-full  relative">
+    <div ref={scope} className="relative max-w-[800px] md:-top-1/3 lg:-top-1/2">
       {!showColorfulSvg && !showPortrait && (
         <SvgPortraitNoColor
           onAnimationComplete={() => handleFirstAnimation()}

@@ -36,7 +36,7 @@ type MyLinkProps = {
   href: string;
   svg: JSX.Element;
 };
-function MyLink({ href, svg }: MyLinkProps) {
+export function MyLink({ href, svg }: MyLinkProps) {
   return (
     <a href={href} rel="noopener noreferrer" target="_blank">
       {svg}

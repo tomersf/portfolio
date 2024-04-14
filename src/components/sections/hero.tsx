@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fontNotoSerif } from "@/lib/fonts";
-import TextAnimation from "./text";
+import TextAnimation from "../text";
 
 type Props = {};
 
@@ -17,9 +17,9 @@ const Hero = (props: Props) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 1 }}
       >
-        <div className="p-2">
+        <div className="">
           <h1
-            className={`${fontNotoSerif} sm:text-4xl md:text-8xl lg:text-9xl font-light`}
+            className={`${fontNotoSerif} text-3xl sm:text-6xl md:text-8xl lg:text-9xl font-light`}
           >
             TOMER SHAFIR
           </h1>

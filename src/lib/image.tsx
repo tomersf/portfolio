@@ -3,9 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const imageWidth = 800;
-const imageHeight = 800;
-
 export const variants = (duration?: number) => {
   return {
     initial: {
@@ -36,7 +33,7 @@ export const SvgPortraitNoColor = ({
     <motion.svg
       id="mysvg-no-color"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="100 300 800 800"
+      viewBox="0 0 800 800"
       className="overflow-visible"
     >
       <motion.path
@@ -66,7 +63,7 @@ export const SvgPortraitWithColor = ({
     <motion.svg
       id="mysvg-color"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="100 300 800 800"
+      viewBox="0 0 800 800"
       className="overflow-visible "
     >
       <motion.path
@@ -161,7 +158,6 @@ export const Portrait = ({
       width={800}
       height={800}
       id="myportrait"
-      className="absolute -bottom-80 right-16"
     />
   );
 };

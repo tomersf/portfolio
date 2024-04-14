@@ -6,9 +6,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuShortcut,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { navOptions } from "@/lib/constant";
+import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
+import icons from "@/lib/icons";
+import { MyLink } from "./shortcuts";
 
 type Props = {};
 
@@ -37,6 +41,17 @@ const Sidebar = (props: Props) => {
         {navOptions.map((option) => (
           <DropdownMenuItem key={option.label} asChild>
             <Link href={option.href}>{option.label}</Link>
+          </DropdownMenuItem>
+        ))}
+        <DropdownMenuSeparator />
+        {icons.map((icon) => (
+          <DropdownMenuItem key={icon.href} asChild>
+            <a href={icon.href} rel="noopener noreferrer" target="_blank">
+              {icon.title}
+              <DropdownMenuShortcut className="opacity-100">
+                {icon.svg}
+              </DropdownMenuShortcut>
+            </a>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
