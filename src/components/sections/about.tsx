@@ -1,19 +1,20 @@
-"use client";
 import React from "react";
 import TomerSvg from "../self-portrait-svg";
 import AboutContainer from "../containers/about";
+import ResumeButton from "../resume-button";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
-    <div className="flex gap-11 ">
-      <div className="w-full ">
+    <div className="flex gap-11">
+      <div className="w-full flex flex-col items-center md:items-end">
         <div>
           <AboutContainer />
         </div>
+        <div className="relative flex justify-end  md:pr-2">
+          <ResumeButton />
+        </div>
       </div>
-      <div className="md:flex w-full h-full hidden">
+      <div className="md:flex w-full hidden">
         <div className="w-full">
           <TomerSvg />
         </div>
