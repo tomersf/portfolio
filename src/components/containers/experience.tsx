@@ -1,10 +1,11 @@
 import React from "react";
 import Container from "../container";
+import { ContainerProps } from "../container";
 
-type Props = {};
+type Props = ContainerProps;
 
 const ExperienceContainer = (props: Props) => {
-  return <Container body={"Test"} badge="About Me" footer="@tomersf" />;
+  return <Container {...props} />;
 };
 
 export default ExperienceContainer;

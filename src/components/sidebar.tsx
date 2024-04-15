@@ -10,9 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { navOptions } from "@/lib/constant";
-import { DropdownMenuArrow } from "@radix-ui/react-dropdown-menu";
 import icons from "@/lib/icons";
-import { MyLink } from "./shortcuts";
 
 type Props = {};
 
@@ -35,7 +33,7 @@ const Sidebar = (props: Props) => {
           />
         </svg>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="z-[100]">
         <DropdownMenuLabel>Navigation</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {navOptions.map((option) => (

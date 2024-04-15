@@ -1,10 +1,11 @@
 import React from "react";
 import { Badge } from "./ui/badge";
 
-type ContainerProps = {
+export type ContainerProps = {
   body: string | React.ReactNode;
   badge: string | React.ReactNode;
   bgColor?: string;
+  ring?: string;
   badgeColor?: string;
   footer?: string | React.ReactNode;
 };
@@ -15,9 +16,10 @@ export default function Container({
   badgeColor,
   bgColor,
   footer,
+  ring,
 }: ContainerProps) {
   return (
-    <div className="w-full mx-auto py-10 px-10 md:p-5 gap-y-20 gap-10 ">
+    <div className="w-full mx-auto py-10 px-10 md:p-5">
       <div className="relative group">
         <div className="border border-primary rounded-md p-2 space-y-2 bg-secondary group-hover:translate-x-3 group-hover:translate-y-3 transition-all relative z-50">
           <div className="p-3 font-mono">{body}</div>
@@ -39,9 +41,9 @@ export default function Container({
           </div>
         </div>
         <div
-          className={`absolute top-0 right-0 translate-x-3 translate-y-3 w-full h-full rounded-md ${
+          className={`absolute top-0 right-0 translate-x-3 translate-y-3 w-full h-full rounded-md bg-opacity-50 ${
             bgColor ?? "bg-primary"
-          }`}
+          } ${ring} ${ring ? "ring-1" : ""}`}
         />
       </div>
     </div>

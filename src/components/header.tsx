@@ -6,7 +6,7 @@ import Shortcuts from "./shortcuts";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-[60] w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex md:pr-5">
         <div className="flex flex-grow">
           <div className="">
