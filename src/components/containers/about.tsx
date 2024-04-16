@@ -5,13 +5,19 @@ type Props = {};
 
 const AboutContainer = (props: Props) => {
   const body = getAboutBody();
-  return <Container body={body} badge="About Me" footer="@tomersf" />;
+  return (
+    <Container
+      body={body}
+      badge="About Me"
+      footer="@tomersf"
+      title="Hey, I'm Tomer."
+    />
+  );
 };
 
 function getAboutBody() {
   return (
     <>
-      <h1 className="font-bold">{"Hey, I'm Tomer."}</h1>
       <p className="font-medium line-clamp-2">
         Computer science graduate from Israel.
       </p>

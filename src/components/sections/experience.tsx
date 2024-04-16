@@ -25,21 +25,29 @@ export default function Experience() {
           }}
         >
           <CarouselContent>
-            {experiences.map((avatar, index) => {
-              const { ring, bg } =
+            {experiences.map((experience, index) => {
+              const { ring, bg, border } =
                 rings[Math.floor(Math.random() * rings.length)];
               return (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <ExperienceContainer
+                    title={experience.title}
+                    subtitle={experience.subtitle}
                     badge={
                       <Avatar className="p-0.5">
-                        <AvatarImage src={avatar.avatarUrl} />
-                        <AvatarFallback>{avatar.avatarFallback}</AvatarFallback>
+                        <AvatarImage src={experience.avatarUrl} />
+                        <AvatarFallback>
+                          {experience.avatarFallback}
+                        </AvatarFallback>
                       </Avatar>
                     }
                     ring={ring}
                     bgColor={bg}
-                    body="test"
+                    titleBorderColor={border}
+                    body={experience.body}
+                    footer={experience.techStack}
+                    stage={experience.stage ? experience.stage : null}
+                    linkBtnUrl={experience.linkBtnUrl}
                   />
                 </CarouselItem>
               );
