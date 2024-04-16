@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <>
       <div className="hidden md:block">
-        <Image src="/logo.png" alt="logo" width={260} height={382} />
+        <Image src="/logo.png" alt="logo" width={100} height={382} />
       </div>
       <div className="md:hidden">
         <Image src="/logo.png" alt="logo" width={100} height={162} />

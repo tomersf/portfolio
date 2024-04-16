@@ -14,7 +14,7 @@ const About = () => {
           <ResumeButton />
         </div>
       </div>
-      <div className="md:flex w-full hidden">
+      <div className="md:block w-full hidden">
         <div className="w-full">
           <TomerSvg />
         </div>

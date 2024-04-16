@@ -21,7 +21,7 @@ export default function Experience() {
       <div className="w-2/3 md:w-4/5 lg:h-5/6">
         <Carousel
           opts={{
-            loop: true,
+            loop: false,
           }}
         >
           <CarouselContent>

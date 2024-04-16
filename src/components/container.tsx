@@ -47,7 +47,7 @@ export default function Container({
               {subtitle}
             </h3>
           ) : null}
-          <div className="p-2 font-mono text-sm sm:text-md lg:text-lg">
+          <div className="p-2 font-mono text-sm sm:text-base lg:text-lg">
             {body}
           </div>
           <span className="absolute -top-8 right-0 text-3xl">

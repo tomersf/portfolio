@@ -18,13 +18,10 @@ const Skills = (props: Props) => {
       />
       <div className="flex flex-col items-center justify-center -rotate-6">
         <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold">Skills</h1>
-        <div className="w-full h-2 bg-primary rounded-full "></div>
-        <div className="w-[90%] h-2 bg-primary rounded-full translate-x-2"></div>
-        <div className="w-[70%] h-2 bg-primary rounded-full translate-x-2"></div>
-        <div className="w-[50%] h-2 bg-primary rounded-full translate-x-2"></div>
-        <div className="w-[30%] h-2 bg-primary rounded-full translate-x-2"></div>
+        <div className="w-full h-2 bg-indigo-500 rounded-full "></div>
+        <div className="w-full h-2 bg-purple-950 rounded-full translate-x-2"></div>
       </div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col mt-10  md:flex-row">
         <FrontendContainer />
         <BackendContainer />
       </div>

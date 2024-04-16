@@ -130,3 +130,10 @@ export const experiences: Experience[] = [
     stage: "PLANNING",
   },
 ];
+
+export const skills = {
+  frontend: {
+    title: "Frontend",
+    skills: [],
+  },
+};

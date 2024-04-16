@@ -20,7 +20,7 @@ const Header = () => {
           <div className="md:hidden mx-5 hover:bg-accent p-2 hover:rounded-lg">
             <Sidebar />
           </div>
-          <div className="pb-1 min-w-24 h-full hidden md:flex sm:items-center md:items-end">
+          <div className="pb-1 min-w-24 h-full hidden md:flex sm:items-center">
             <Shortcuts />
           </div>
         </div>
