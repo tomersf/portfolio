@@ -89,6 +89,27 @@ export const experiences: Experience[] = [
     linkBtnUrl: "https://www.fireblocks.com/",
   },
   {
+    avatarUrl: "https://cdn-icons-png.flaticon.com/512/763/763812.png",
+    avatarFallback: "Sport",
+    title: "TERRA",
+    subtitle: "Sport court rental application",
+    body: (
+      <div>
+        Developed a dynamic sports court rental app as part of my final
+        graduation project.
+        <br />
+        Users could rent and also publish a court which can be rented by others.
+        <br />
+        <span className="font-semibold italic">
+          Utilized Expo framework for real time notifications
+        </span>
+      </div>
+    ),
+    techStack:
+      "React Native, Redux, Expo, Node.JS, Express, AWS S3, MongoDB, Mongoose",
+    linkBtnUrl: "https://github.com/tomersf/TERRA-public",
+  },
+  {
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/5680/5680036.png",
     avatarFallback: "DevOps",
     title: "DevOps Bootcamp",
@@ -125,7 +146,14 @@ export const experiences: Experience[] = [
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/2371/2371353.png",
     avatarFallback: "AML",
     title: "American Medical Laboratories",
-    body: "Worked as a research assistant in a medical laboratory. Part of my time I developed an internal C# application for producing Covid-19 PDF files for our patients.",
+    body: (
+      <div>
+        Worked as a research assistant in a medical laboratory.
+        <br /> Part of my time I developed an internal{" "}
+        <span className="font-semibold italic">C# application</span> for
+        producing Covid-19 PDF files for our patients.
+      </div>
+    ),
     techStack: "C#",
     linkBtnUrl: "https://github.com/tomersf/portfolio",
   },
