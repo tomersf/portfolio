@@ -32,7 +32,7 @@ export default function Container({
   stage,
 }: ContainerProps) {
   return (
-    <div className="w-full mx-auto py-10 px-10 md:p-5">
+    <div className="w-full mx-auto py-10 px-10 md:p-5 mt-2">
       <div className="relative group">
         <div className="border border-primary rounded-md p-2 space-y-2 bg-secondary group-hover:translate-x-3 group-hover:translate-y-3 transition-all relative z-50">
           <h1
@@ -47,10 +47,10 @@ export default function Container({
               {subtitle}
             </h3>
           ) : null}
-          <div className="p-2 font-mono text-sm sm:text-base lg:text-lg">
+          <div className="p-2 overflow-hidden font-mono text-sm sm:text-base lg:text-lg">
             {body}
           </div>
-          <span className="absolute -top-8 right-0 text-3xl">
+          <div className="absolute -top-8 right-0 text-3xl">
             {typeof badge !== "string" ? (
               badge
             ) : (
@@ -58,7 +58,7 @@ export default function Container({
                 {badge}
               </Badge>
             )}
-          </span>
+          </div>
 
           <div>
             {typeof footer !== "string" ? (

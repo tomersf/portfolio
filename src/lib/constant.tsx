@@ -1,3 +1,6 @@
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { title } from "process";
+
 type NavOption = {
   label: string;
   href: string;
@@ -131,9 +134,145 @@ export const experiences: Experience[] = [
   },
 ];
 
-export const skills = {
+export type InnerSkill = {
+  name: string;
+  level: BadgeLevel;
+  url: string;
+};
+
+export type Skill = {
+  title: string;
+  badge: {
+    avatarUrl: string;
+    avatarFallback: string;
+  };
+  skills: InnerSkill[];
+};
+
+export type SkillMap = Record<"frontend" | "backend" | "devops", Skill>;
+
+export const skills: SkillMap = {
   frontend: {
     title: "Frontend",
-    skills: [],
+    badge: {
+      avatarUrl: "https://cdn-icons-png.flaticon.com/512/6211/6211957.png",
+      avatarFallback: "FE",
+    },
+    skills: [
+      {
+        name: "Javascript",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/128/5968/5968292.png",
+      },
+      {
+        name: "React.js",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/512/10826/10826338.png",
+      },
+      {
+        name: "HTML",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/512/174/174854.png",
+      },
+      {
+        name: "Next.js",
+        level: BadgeLevel.Skilled,
+        url: "https://cdn-icons-png.flaticon.com/512/481/481058.png",
+      },
+      {
+        name: "CSS",
+        level: BadgeLevel.Skilled,
+        url: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+      },
+      {
+        name: "React Native",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/3081/3081530.png",
+      },
+
+      {
+        name: "Tailwind",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/128/2011/2011448.png",
+      },
+    ],
+  },
+  backend: {
+    title: "Backend",
+    badge: {
+      avatarUrl: "https://cdn-icons-png.flaticon.com/512/6213/6213731.png",
+      avatarFallback: "BE",
+    },
+    skills: [
+      {
+        name: "Node.js",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/512/15484/15484303.png",
+      },
+      {
+        name: "SQL",
+        level: BadgeLevel.Skilled,
+        url: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
+      },
+      {
+        name: "Python",
+        level: BadgeLevel.Skilled,
+        url: "https://cdn-icons-png.flaticon.com/512/3098/3098090.png",
+      },
+      {
+        name: "Golang",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/919/919838.png",
+      },
+      {
+        name: "MongoDB",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/188/188333.png",
+      },
+      {
+        name: "C#",
+        level: BadgeLevel.Competent,
+        url: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png",
+      },
+    ],
+  },
+  devops: {
+    title: "DevOps & Misc",
+    badge: {
+      avatarUrl: "https://cdn-icons-png.flaticon.com/512/6419/6419097.png",
+      avatarFallback: "Dev",
+    },
+    skills: [
+      {
+        name: "Typescript",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+      },
+      {
+        name: "Docker",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/128/919/919853.png",
+      },
+      {
+        name: "Kubernetes",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/5100/5100490.png",
+      },
+      {
+        name: "Git",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/15466/15466163.png",
+      },
+      {
+        name: "Terraform",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/11861/11861447.png",
+      },
+      {
+        name: "Linux",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/25/25719.png",
+      },
+    ],
   },
 };
