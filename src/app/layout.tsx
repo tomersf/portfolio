@@ -19,6 +19,7 @@ export default function RootLayout({
       <body className={fontNotoSerif}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
