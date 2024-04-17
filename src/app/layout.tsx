@@ -17,15 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fontNotoSerif}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );
