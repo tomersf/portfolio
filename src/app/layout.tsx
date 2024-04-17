@@ -6,7 +6,7 @@ import { fontNotoSerif } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Tomer Shafir",
-  description: "Tomer Shafir's protfolio website",
+  description: "Tomer Shafir's portfolio website",
 };
 
 export default function RootLayout({
