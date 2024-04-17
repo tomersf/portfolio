@@ -21,7 +21,7 @@ export enum BadgeLevel {
   Competent = "Competent",
   Proficient = "Proficient",
   Skilled = "Skilled",
-  Intermediate = "Intermidate",
+  Intermediate = "Intermediate",
   Advanced = "Advanced",
 }
 
@@ -267,6 +267,11 @@ export const skills: SkillMap = {
         name: "Terraform",
         level: BadgeLevel.Proficient,
         url: "https://cdn-icons-png.flaticon.com/512/11861/11861447.png",
+      },
+      {
+        name: "Ansible",
+        level: BadgeLevel.Proficient,
+        url: "https://cdn-icons-png.flaticon.com/512/9791/9791538.png",
       },
       {
         name: "Linux",

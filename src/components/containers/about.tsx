@@ -11,14 +11,15 @@ const AboutContainer = (props: Props) => {
       badge="About Me"
       footer="@tomersf"
       title="Hey, I'm Tomer."
+      containerClassName="p-5"
     />
   );
 };
 
 function getAboutBody() {
   return (
-    <>
-      <p className="font-medium line-clamp-2">
+    <div className="tracking-wide">
+      <p className="font-medium line-clamp-2 mb-0.5">
         Computer science graduate from Israel.
       </p>
       <p>
@@ -27,7 +28,7 @@ function getAboutBody() {
         opportunity to grow professionally and contribute in a meaningful way.
       </p>
       <p>Constantly learning and always ready for an advenutre!</p>
-    </>
+    </div>
   );
 }
 

@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Link2Icon } from "@radix-ui/react-icons";
 import Stage from "./stage";
+import { cn } from "@/lib/utils";
 
 export type ContainerProps = {
   title: string | React.ReactNode;
@@ -16,6 +17,7 @@ export type ContainerProps = {
   footer?: string | React.ReactNode;
   linkBtnUrl?: string;
   stage?: "IN_PROGRESS" | "PLANNING" | null;
+  containerClassName?: string;
 };
 
 export default function Container({
@@ -30,13 +32,14 @@ export default function Container({
   ring,
   linkBtnUrl,
   stage,
+  containerClassName,
 }: ContainerProps) {
   return (
-    <div className="w-full mx-auto py-10 px-10 md:p-5 mt-2">
+    <div className={cn("w-full mx-auto p-10 md:p-5 mt-2", containerClassName)}>
       <div className="relative group">
         <div className="border border-primary rounded-md p-2 space-y-2 bg-secondary group-hover:translate-x-3 group-hover:translate-y-3 transition-all relative z-50">
           <h1
-            className={`text-xl md:text-2xl lg:text-3xl font-bold ${titleBorderColor} border-b-2 w-fit`}
+            className={`text-xl md:text-2xl lg:text-3xl font-bold mt-1.5 md:mt-0 ${titleBorderColor} border-b-2 w-fit`}
           >
             {title}
           </h1>
@@ -50,7 +53,7 @@ export default function Container({
           <div className="p-2 overflow-hidden font-mono text-sm sm:text-base lg:text-lg">
             {body}
           </div>
-          <div className="absolute -top-8 right-0 text-3xl">
+          <div className="absolute -top-8 right-0 text-3xl p-1">
             {typeof badge !== "string" ? (
               badge
             ) : (

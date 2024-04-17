@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="flex gap-11">
       <div className="w-full flex flex-col items-center md:items-end">
-        <div>
+        <div className="">
           <AboutContainer />
         </div>
         <div className="relative flex justify-end  md:pr-2">

@@ -13,7 +13,7 @@ const ExperienceContainer = ({ footer: techStack, ...props }: Props) => {
       </span>
     </footer>
   ) : null;
-  return <Container {...props} footer={stack} />;
+  return <Container {...props} footer={stack} containerClassName="p-4" />;
 };
 
 export default ExperienceContainer;
