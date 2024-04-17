@@ -35,7 +35,12 @@ export default function Container({
   containerClassName,
 }: ContainerProps) {
   return (
-    <div className={cn("w-full mx-auto p-10 md:p-5 mt-2", containerClassName)}>
+    <div
+      className={cn(
+        "w-full mx-auto p-10 md:p-5 mt-2 hover:cursor-pointer",
+        containerClassName
+      )}
+    >
       <div className="relative group">
         <div className="border border-primary rounded-md p-2 space-y-2 bg-secondary group-hover:translate-x-3 group-hover:translate-y-3 transition-all relative z-50">
           <h1

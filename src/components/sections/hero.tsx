@@ -18,9 +18,7 @@ const Hero = (props: Props) => {
         transition={{ duration: 1.5, delay: 1 }}
       >
         <div className="">
-          <h1
-            className={`${fontNotoSerif} text-3xl sm:text-6xl md:text-8xl lg:text-9xl font-light`}
-          >
+          <h1 className="text-xl xss:text-2xl xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light">
             TOMER SHAFIR
           </h1>
           <motion.div

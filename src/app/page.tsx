@@ -14,7 +14,7 @@ export default function Home() {
       <section className="max-h-[800px] md:mb-24" id="about">
         <About />
       </section>
-      <section className="relative lg:-top-28" id="projects">
+      <section className="relative lg:-top-28" id="experience">
         <Experience />
       </section>
       <section className="relative" id="skills">

@@ -10,8 +10,8 @@ export type StageProgress = "IN_PROGRESS" | "PLANNING";
 
 export const navOptions: NavOption[] = [
   { label: "Home", href: "/" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -78,9 +78,9 @@ export const experiences: Experience[] = [
     body: (
       <div>
         Working as a{" "}
-        <span className="font-semibold">Technical Support Engineer</span> &
-        Contributing as a{" "}
-        <span className="font-semibold">Full-stack Engineer</span> in the
+        <span className="font-semibold italic">Technical Support Engineer</span>{" "}
+        & Contributing as a{" "}
+        <span className="font-semibold italic">Full-stack Engineer</span> in the
         support department.
       </div>
     ),
@@ -92,17 +92,24 @@ export const experiences: Experience[] = [
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/5680/5680036.png",
     avatarFallback: "DevOps",
     title: "DevOps Bootcamp",
-    body: "Participated in a DevOps bootcamp where I was taught the fundametals of the field",
-    techStack: "Docker, Kubernetes, Ansible, Terraform, EC2, EKS, ECR ...",
+    body: (
+      <div>
+        Participated in a DevOps bootcamp led by{" "}
+        <span className="font-semibold italic">Bynet Data Communications</span>{" "}
+        where I was taught the fundametals of the field
+      </div>
+    ),
+    techStack:
+      "Shell Scripting, Linux, Python, Jenkins, Docker, Kubernetes, Ansible, Terraform, AWS EC2 / EKS / ECR",
     linkBtnUrl: "https://github.com/tomersf/DevOpsBootcamp",
   },
   {
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/15484/15484303.png",
     avatarFallback: "Node",
     title: "Node.js Microservice",
-    body: "An event ticket ordering application with a microservice architecture",
+    body: "An events ticket ordering application with a microservice architecture",
     techStack:
-      "Node.js, Express, Typescript, MongoDB, Mongoose, Nginx, Kubernetes ...",
+      "Node.js, Express, Typescript, MongoDB, Mongoose, Nginx, Docker, NATS Streaming, Kubernetes",
     stage: "IN_PROGRESS",
     linkBtnUrl: "https://github.com/tomersf/microJS",
   },
@@ -110,8 +117,16 @@ export const experiences: Experience[] = [
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/281/281089.png",
     avatarFallback: "Portfolio",
     title: "Personal Portfolio",
-    body: "My personal portfolio website that you are currenty on!",
+    body: "My portfolio website that you are currently viewing!",
     techStack: "Next.js, Tailwind, Typescript, Framer-Motion",
+    linkBtnUrl: "https://github.com/tomersf/portfolio",
+  },
+  {
+    avatarUrl: "https://cdn-icons-png.flaticon.com/512/2371/2371353.png",
+    avatarFallback: "AML",
+    title: "American Medical Laboratories",
+    body: "Worked as a research assistant in a medical laboratory. Part of my time I developed an internal C# application for producing Covid-19 PDF files for our patients.",
+    techStack: "C#",
     linkBtnUrl: "https://github.com/tomersf/portfolio",
   },
   {

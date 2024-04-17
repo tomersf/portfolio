@@ -7,7 +7,7 @@ const TextAnimation = ({ startAnimation }: { startAnimation: boolean }) => {
   const strings = ["Developer.", "Devops.", "Full-Stack."];
 
   return (
-    <div className="text-2xl md:text-4xl lg:text-6xl font-thin tracking-wider text-secondary md:m-2">
+    <div className="text-lg xss:text-xl xs:text-2xl md:text-4xl lg:text-6xl font-thin tracking-wider text-secondary md:m-2">
       <ReactTyped
         strings={strings}
         typeSpeed={110}
