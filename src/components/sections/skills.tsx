@@ -31,7 +31,7 @@ const Skills = (props: Props) => {
             }
             body={buildSkillsBody(skills.frontend.skills)}
             titleBorderColor="border-primary"
-            containerClassName="p-0 mt-5"
+            containerClassName="p-0 pr-5 py-4 sm:p-8 md:p-10"
           />
         </ScrollArea>
         <ScrollArea className="h-[300px] sm:h-full">
@@ -47,33 +47,37 @@ const Skills = (props: Props) => {
             }
             body={buildSkillsBody(skills.backend.skills)}
             titleBorderColor="border-primary"
+            containerClassName="p-0 pr-5 py-4 sm:p-8 md:p-10"
           />
         </ScrollArea>
       </div>
-      <ScrollArea className="h-[300px] sm:h-full">
-        <Container
-          title={skills.devops.title}
-          badge={
-            <Avatar className="p-0.5">
-              <AvatarImage src={skills.devops.badge.avatarUrl} />
-              <AvatarFallback>
-                {skills.devops.badge.avatarFallback}
-              </AvatarFallback>
-            </Avatar>
-          }
-          body={buildSkillsBody(skills.devops.skills)}
-          bgColor="bg-indigo-500"
-          ring="ring-indigo-500"
-          titleBorderColor="border-indigo-500"
-        />
-      </ScrollArea>
+      <div className="w-5/6 md:w-1/2">
+        <ScrollArea className="h-[300px] sm:h-full">
+          <Container
+            title={skills.devops.title}
+            badge={
+              <Avatar className="p-0.5">
+                <AvatarImage src={skills.devops.badge.avatarUrl} />
+                <AvatarFallback>
+                  {skills.devops.badge.avatarFallback}
+                </AvatarFallback>
+              </Avatar>
+            }
+            body={buildSkillsBody(skills.devops.skills)}
+            bgColor="bg-indigo-500"
+            ring="ring-indigo-500"
+            titleBorderColor="border-indigo-500"
+            containerClassName="p-0 pr-5 py-4 sm:p-6 md:p-10"
+          />
+        </ScrollArea>
+      </div>
     </div>
   );
 };
 
 function buildSkillsBody(skills: InnerSkill[]) {
   return (
-    <div className="grid p-2 gap-6 xss:grid-cols-2 md:grid-cols-3 md:p-4 md:m-2 md:mx-6 md:gap-12 md:gap-x-20 ">
+    <div className="grid xss:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:p-4 md:m-2 md:mx-6 md:gap-12 md:gap-x-20 p-2 gap-6">
       {skills.map((skill) => {
         return (
           <div
