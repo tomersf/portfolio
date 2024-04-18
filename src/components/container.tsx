@@ -18,6 +18,7 @@ export type ContainerProps = {
   linkBtnUrl?: string;
   stage?: "IN_PROGRESS" | "PLANNING" | null;
   containerClassName?: string;
+  date?: string | React.ReactNode;
 };
 
 export default function Container({
@@ -33,6 +34,7 @@ export default function Container({
   linkBtnUrl,
   stage,
   containerClassName,
+  date,
 }: ContainerProps) {
   return (
     <div
@@ -55,6 +57,7 @@ export default function Container({
               {subtitle}
             </h3>
           ) : null}
+          {date ? <h3 className="font-medium lg:text-lg">{date}</h3> : null}
           <div className="p-2 overflow-hidden font-mono text-sm sm:text-base lg:text-lg">
             {body}
           </div>

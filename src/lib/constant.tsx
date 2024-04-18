@@ -1,5 +1,4 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { title } from "process";
+import { getYearsSince2022 } from "./utils";
 
 type NavOption = {
   label: string;
@@ -67,6 +66,7 @@ type Experience = {
   techStack?: string;
   stage?: StageProgress;
   linkBtnUrl?: string;
+  date?: string | React.ReactNode;
 };
 
 export const experiences: Experience[] = [
@@ -75,12 +75,18 @@ export const experiences: Experience[] = [
     avatarFallback: "Fireblocks",
     title: "Fireblocks",
     subtitle: "Digital asset security company",
+    date: (
+      <div className="text-opacity-90 flex flex-col text-zinc-600 text-sm">
+        January 2022 - PRESENT
+        <span>{getYearsSince2022()} Yrs+</span>
+      </div>
+    ),
     body: (
       <div>
-        Working as a{" "}
-        <span className="font-semibold italic">Technical Support Engineer</span>{" "}
-        & Contributing as a{" "}
-        <span className="font-semibold italic">Full-stack Engineer</span> in the
+        Currently Working as a{" "}
+        <span className="font-bold italic">Technical Support Engineer</span> &
+        Contributing as a{" "}
+        <span className="font-bold italic">Full-stack Engineer</span> in the
         support department.
       </div>
     ),
@@ -149,13 +155,14 @@ export const experiences: Experience[] = [
     body: (
       <div>
         Worked as a research assistant in a medical laboratory.
-        <br /> Part of my time I developed an internal{" "}
+        <br />
+        Developed an internal{" "}
         <span className="font-semibold italic">C# application</span> for
         producing Covid-19 PDF files for our patients.
       </div>
     ),
     techStack: "C#",
-    linkBtnUrl: "https://github.com/tomersf/portfolio",
+    linkBtnUrl: "https://www.aml.co.il/en/",
   },
   {
     avatarUrl: "https://cdn-icons-png.flaticon.com/512/2111/2111432.png",

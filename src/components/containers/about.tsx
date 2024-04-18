@@ -23,9 +23,9 @@ function getAboutBody() {
         Computer science graduate from Israel.
       </p>
       <p>
-        A passionate <span className="font-semibold">Developer</span> and{" "}
-        <span className="font-semibold">DevOps</span> enthusiast, seeking for an
-        opportunity to grow professionally and contribute in a meaningful way.
+        A passionate <span className="font-bold">Developer</span> and{" "}
+        <span className="font-bold">DevOps</span> enthusiast, seeking for
+        opportunities to grow professionally and contribute in a meaningful way.
       </p>
       <p>Constantly learning and always ready for an advenutre!</p>
     </div>

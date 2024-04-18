@@ -37,6 +37,7 @@ export default function Experience() {
                   <ExperienceContainer
                     title={experience.title}
                     subtitle={experience.subtitle}
+                    date={experience.date}
                     badge={
                       <Avatar className="p-0.5">
                         <AvatarImage src={experience.avatarUrl} />
