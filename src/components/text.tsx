@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 
 const TextAnimation = ({ startAnimation }: { startAnimation: boolean }) => {
   if (!startAnimation) return null;
-  const strings = ["Developer.", "Devops.", "Full-Stack."];
+  const strings = ["Full-Stack.", "Developer.", "Software Engineer."];
 
   return (
     <div className="text-lg xss:text-xl xs:text-2xl md:text-4xl lg:text-6xl font-thin tracking-wider text-secondary md:m-2">
