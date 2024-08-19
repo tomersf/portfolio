@@ -1,4 +1,4 @@
-import { getYearsSince2022 } from "./utils";
+import { getYearsSince } from "./utils";
 
 type NavOption = {
   label: string;
@@ -71,21 +71,46 @@ type Experience = {
 
 export const experiences: Experience[] = [
   {
+    avatarUrl:
+      "https://www.abra-it.com/wp-content/uploads/2021/12/logo-big.svg",
+    avatarFallback: "Abra",
+    title: "Abra",
+    subtitle: "R&D Solutions",
+    date: (
+      <div className="text-opacity-90 flex flex-col text-zinc-600 text-sm">
+        June 2024 - PRESENT
+        <span>{getYearsSince("2024")} Yrs+</span>
+      </div>
+    ),
+    body: (
+      <div>
+        Working as a <span className="font-bold italic">Junior Developer</span>.
+        <br /> Developing a{" "}
+        <span className="font-bold italic">
+          C# automation testing framework
+        </span>{" "}
+        for integration into CI pipelines across microservices repositories.
+      </div>
+    ),
+    techStack: "C# .NET, React, Playwright, Docker ...",
+    linkBtnUrl: "https://www.abra-it.com/en/",
+  },
+  {
     avatarUrl: "https://asset.brandfetch.io/idxr5j_t0u/idumxcM-s7.svg",
     avatarFallback: "Fireblocks",
     title: "Fireblocks",
     subtitle: "Digital asset security company",
     date: (
       <div className="text-opacity-90 flex flex-col text-zinc-600 text-sm">
-        January 2022 - PRESENT
-        <span>{getYearsSince2022()} Yrs+</span>
+        January 2022 - June 2024
+        <span>{getYearsSince("2022")} Yrs+</span>
       </div>
     ),
     body: (
       <div>
-        Currently Working as a{" "}
+        Worked as a{" "}
         <span className="font-bold italic">Technical Support Engineer</span> &
-        Contributing as a{" "}
+        Contributed as a{" "}
         <span className="font-bold italic">Full-stack Engineer</span> in the
         support department.
       </div>
@@ -260,6 +285,11 @@ export const skills: SkillMap = {
         url: "https://cdn-icons-png.flaticon.com/512/15484/15484303.png",
       },
       {
+        name: "C#",
+        level: BadgeLevel.Intermediate,
+        url: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png",
+      },
+      {
         name: "SQL",
         level: BadgeLevel.Skilled,
         url: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
@@ -278,11 +308,6 @@ export const skills: SkillMap = {
         name: "MongoDB",
         level: BadgeLevel.Proficient,
         url: "https://cdn-icons-png.flaticon.com/512/188/188333.png",
-      },
-      {
-        name: "C#",
-        level: BadgeLevel.Competent,
-        url: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png",
       },
     ],
   },
