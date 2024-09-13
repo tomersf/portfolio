@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "../container";
 
-type Props = {};
-
-const AboutContainer = (props: Props) => {
+const AboutContainer = () => {
   const body = getAboutBody();
   return (
     <Container
@@ -26,7 +24,7 @@ function getAboutBody() {
         A passionate <span className="font-bold">Developer</span>, seeking for
         opportunities to grow professionally and contribute in a meaningful way.
       </p>
-      <p>Constantly learning and always ready for an advenutre!</p>
+      <p>Constantly learning and always ready for an adventure!</p>
     </div>
   );
 }
