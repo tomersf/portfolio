@@ -1,22 +1,25 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import {type ClassValue, clsx} from "clsx";
+import {twMerge} from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+    return twMerge(clsx(inputs));
 }
 
-export function getYearsSince(year: string) {
-  const currentDate = new Date();
-  const january2022 = new Date(`January 1, ${year}`);
+export function getYearsSince(startingYear: string, endYear?: string) {
+    const start = new Date(Number(startingYear), 0, 1); // Jan 1 start
+    const end = endYear
+        ? new Date(Number(endYear), 0, 1)  // Jan 1 of end year
+        : new Date();
 
-  const diffInMilliseconds = currentDate.getTime() - january2022.getTime();
-  const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25; // Average milliseconds in a year
+    const diffInMilliseconds = end.getTime() - start.getTime();
+    const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
 
-  const years = Math.floor(diffInMilliseconds / millisecondsInYear);
+    let years = Math.round(diffInMilliseconds / millisecondsInYear);
 
-  if (years === 0) {
-    return 1;
-  }
+    // If no endYear, use floor (current progress in year)
+    if (!endYear) {
+        years = Math.floor(diffInMilliseconds / millisecondsInYear);
+    }
 
-  return years;
+    return Math.max(1, years);
 }
